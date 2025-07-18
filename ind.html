@@ -1,0 +1,401 @@
+<!-- Tentei aplicar um pouco de tudo que aprendi na escola. Este foi o resultado-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+
+    }
+
+    body,
+    html {
+        font-family: sans-serif;
+        height: 100%;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    header {
+        background-color: cadetblue;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 80px;
+        padding: 20px;
+
+    }
+
+
+    .menu {
+        display: flex;
+        gap: 30px;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
+        display: inline-block;
+    }
+
+    .menu a:hover {
+        color: rgb(2, 70, 47);
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    main {
+        background-color: rgb(253, 248, 237);
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    aside {
+        background-color: rgba(95, 158, 160, 0.596);
+        width: 600px;
+        padding: 10px;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+    }
+
+    .links-uteis {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .fundo {
+        background-color: rgb(255, 255, 255);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, bold;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        height: 60px;
+        overflow: hidden;
+
+    }
+
+    .fundo a {
+        color: rgb(0, 0, 0);
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+
+    .fundo a:hover {
+        color: rgb(175, 187, 183);
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    section {
+        background-color: rgb(255, 255, 255);
+        width: 60%;
+        height: auto;
+        padding: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 10vw;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    span {
+        background-color: aqua;
+    }
+
+    blockquote {
+        margin: 20px;
+    }
+
+    footer {
+        background-color: cadetblue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Entendendo <strong>HTML</strong></h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>Links Úteis:</h2>
+            <ul class="links-uteis">
+                <li class="fundo"><a href="#Introducao">Introducao ao HTML</a></li>
+                <li class="fundo"><a href="#formulario">Trabalhando com formularios em HTML</a></li>
+                <li class="fundo"><a href="#estrutura">Estruturando seu HTML + formatacoes</a></li>
+                <li class="fundo"><a href="#Midias"> Trabalhando com Midias utilizando HTML</a></li>
+                <li class="fundo"><a href="#tabelas">Criando Tabelas com HTML</a></li>
+                <li class="fundo"><a href="#semantico">Entendendo HTML semantico</a></li>
+                <li class="fundo"><a href="#Referencias">Referencias</a></li>
+            </ul>
+        </aside>
+        <hr>
+        <div class="container">
+            <section id="Introducao">
+                <h2>Introducao ao HTML</h2>
+                <br>
+                <article>
+                    <p> </p>
+                    <p> O HTML (<strong>HyperText Markup Language</strong>) é a linguagem de marcação usada para criar
+                        paginas da web. Ele é usado para estruturar o conteudo na web definindo elementos(TAGS) como
+                        títulos, parágrafos, links, imagens.</p>
+                    <br>
+                    <p>HTML é composto por uma série de elementos, que são representados por tags. Por exemplo, a tag
+                        <span>H1</span> é usada para definir um título principal, enquanto a tag <span>P</span> é usada
+                        para definir um parágrafo.
+                    </p>
+                </article>
+            </section>
+            <section id="formulario">
+                <h2>Trabalhando com formularios em HTML</h2>
+                <br>
+                <article>
+                    <p> Para criar formulários em HTML, usamos a tag <span>form</span>,que serve como um contêiner para
+                        coletar e enviar dados para o servidor (backend). O envio é feito através dos atributos
+                        <span>method</span> e <span>action</span>.
+                    </p>
+                    <br>
+                    <p>
+                        O atributo <strong>method</strong> define como os dados serão enviados: <span>GET</span> (dados
+                        visíveis na URL) ou <span>POST</span> (dados enviados no corpo da requisição). Já o atributo
+                        <strong>action</strong> indica para qual URL ou arquivo os dados serão enviados.
+                    </p>
+                    <br>
+                    <p>Dentro do formulário, podemos usar diversos elementos como <span>input</span>,
+                        <span>button</span>, <span>select</span>, caixas de seleção (<span>checkbox</span>), botões de
+                        opção (<span>radio</span>) e muito mais.
+                    </p>
+                </article>
+            </section>
+            <section id="estrutura">
+                <h2>Estruturando seu HTML + formatações</h2>
+                <br>
+                <article>
+                    <p>
+                        A formatação de texto acontece quando você adapta o conteúdo para transmitir a semântica
+                        adequada. Para isso, usamos tags como
+                        <span>mark</span>, <span>i</span>, <span>u</span>, <span>b</span>, <span>span</span>,
+                        <span>h1</span> até <span>h6</span>, <span>p</span> e muitas outras.
+                    </p>
+                    <br>
+                    <p>
+                        A estrutura do site depende da semântica e do design que você deseja passar. Podemos usar tags
+                        como
+                        <span>div</span> para criar contêiners, <span>fieldset</span> para agrupar elementos de
+                        formulário e
+                        <span>iframe</span> (que substituiu o antigo <span>embed</span>).
+                        Segundo a <a href="https://www.w3.org/RDF/FAQ">W3C</a>, usar semântica no desenvolvimento web é
+                        essencial para criar páginas acessíveis, organizadas e fáceis de manter.
+                    </p>
+                    <br>
+                    <p>
+                        Por que não usamos mais <span>embed</span>? Porque ele foi substituído por tags específicas para
+                        mídias, como
+                        <span>iframe</span>, <span>video</span>, <span>audio</span>, <span>img</span> e
+                        <span>svg</span>, tornando o código mais semântico e organizado.
+                    </p>
+                </article>
+            </section>
+            <section id="Midias">
+                <h2>Trabalhando com Mídias utilizando HTML</h2>
+                <br>
+                <article>
+                    <p>
+                        As tags de mídia são usadas para inserir imagens, vídeos, áudios e até páginas externas dentro
+                        do site principal.
+                        Entre as principais tags temos:
+                    </p>
+                    <br>
+                    <p>
+                        <span>img:</span> para exibir imagens.
+                        <br>
+
+                        <span>svg:</span> para gráficos vetoriais.
+                        <br>
+                        <span>video:</span> para adicionar vídeos.
+                        <br>
+                        <span>audio:</span> para sons e músicas.
+                        <br>
+                        <span>iframe:</span> para incorporar páginas ou vídeos externos (como do YouTube) dentro do seu
+                        site.
+                    </p>
+                    <br>
+                    <p>
+                        Atenção: nem todos os navegadores oferecem suporte completo a todos os formatos, por isso é
+                        importante testar
+                        e, quando necessário, usar atributos como <span>controls</span>, <span>autoplay</span> e
+                        formatos compatíveis.
+                    </p>
+                </article>
+            </section>
+            <section id="tabelas">
+                <h2>Criando Tabelas com HTML</h2>
+                <br>
+                <article>
+                    <p>
+                        Para criar tabelas usamos a tag <span>table</span>. Dentro dela, temos outras tags que
+                        estruturam os dados:
+                        <br>
+                        <span>tr</span> (linha da tabela).
+                        <br>
+                        <span>td</span> (célula de dados).
+                        <br>
+                        <span>th</span> (célula de cabeçalho).
+                    </p>
+                    <br>
+                    <p>
+                        Além disso, podemos agrupar partes da tabela com tags semânticas:
+                        <br>
+                        <span>thead</span> (cabeçalho da tabela, geralmente com <span>th</span>).
+                        <br>
+                        <span>tbody</span> (corpo da tabela, onde ficam as linhas de dados com <span>td</span>).
+                        <br>
+                        <span>tfoot</span> (rodapé da tabela, usado para totais ou observações).
+                    </p>
+                </article>
+            </section>
+            <section id="semantico">
+                <h2>Entendendo HTML Semântico</h2>
+                <br>
+                <article>
+                    <h3><strong>O que significa semântica?</strong></h3>
+                    <blockquote><mark>Semântica é o significado ou sentido de algo dentro de um contexto.</mark>
+                    </blockquote>
+
+                    <p>
+                        Antes do <strong>HTML5</strong>, era comum usar apenas <span>div</span> para estruturar a
+                        página, sem nenhuma semântica.
+                        Com a chegada do HTML5, além da remoção de tags obsoletas, foram introduzidas tags semânticas
+                        para melhorar a
+                        interpretação do conteúdo por navegadores e motores de busca (como o Googlebot).
+                        O objetivo é separar **estrutura** (HTML) de **estilo** (CSS) e tornar a web mais acessível.
+                    </p>
+                    <br>
+                    <h3><strong>Acessibilidade:</strong></h3>
+                    <p>
+                        Acessibilidade na web significa tornar o conteúdo do site acessível para todos.<br>
+                        Quando o navegador carrega uma página, ele interpreta o HTML e cria o <mark>DOM (Document Object
+                            Model)</mark>,
+                        que é uma estrutura em árvore representando todos os elementos da página.<br>
+                        A partir do DOM, o navegador gera uma segunda estrutura chamada:
+                    <blockquote><mark>Árvore de Acessibilidade</mark></blockquote>, que é lida pelos leitores de tela.
+                    </p>
+                    <br>
+
+                    <p>
+                        O DOM sozinho não garante acessibilidade. É necessário usar **tags corretas (semânticas)** e,
+                        quando preciso,
+                        atributos <span>ARIA</span> (como <code>aria-label</code>, <code>role</code>) para informar ao
+                        navegador, por exemplo:
+                    <blockquote><mark>"Isso aqui é um BOTÃO"</mark></blockquote>
+                    </p>
+                    <br>
+                    <h3><strong>Web Scraping:</strong></h3>
+                    <p>
+                        É o processo de coletar dados de um site automaticamente. O **crawler** navega entre páginas
+                        (exemplo: Googlebot)
+                        e cria uma lista de URLs para indexação. O **scraper** extrai os dados dessas páginas para uso
+                        posterior.
+                    </p>
+                    <br>
+                    <h3><strong>Tags Estruturais:</strong></h3>
+                    <p>
+                        Tags semânticas substituem o uso excessivo de <span>div</span>. Exemplos:
+                        <span>header</span> (cabeçalho), <span>main</span> (conteúdo principal), <span>footer</span>
+                        (rodapé),
+                        <span>nav</span> (menu de navegação), <span>section</span> (grupo de conteúdo relacionado),
+                        <span>article</span> (conteúdo independente), <span>aside</span> (conteúdo secundário).<br>
+                        Essas tags ajudam motores de busca e tecnologias assistivas a entenderem a estrutura do site.
+                    </p>
+                    <br>
+                    <h3><strong>SEO:</strong></h3>
+                    <p>
+                        SEO (Search Engine Optimization) é o processo de otimizar um site para melhorar sua visibilidade
+                        nos motores
+                        de busca. Isso envolve uso de tags semânticas, palavras-chave relevantes e boa estrutura.
+                    </p>
+                </article>
+            </section>
+            <section id="Referencias">
+                <h2>Referencias</h2>
+                <article>
+                    <ul>
+                        <li><a href="https://stackoverflow.com/">stack overflow</a></li>
+                    <li><a href="https://medium.com/">Medium</a></li>
+                    <li><a href="https://www.dio.me/">Dio.me</a></li>
+                    <li><a href="https://www.w3schools.com/">w3schools</a></li>
+                    </ul>
+                </article>
+            </section>
+
+        </div>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2023 MATEUSSSSS. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Mateus Lima Bispo.</p>
+        <br>
+        <a href="https://github.com/GoatMateusLima">Veja meu GitHub</a>.
+
+    </footer>
+</body>
+
+</html>
